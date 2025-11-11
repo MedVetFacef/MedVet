@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import productRoutes from "./routes/product.js";
+import authRoutes from "./routes/auth.js";
 import { connectDatabse } from "./config/dbConnect.js";
 import errorMiddleware from "./middleware/erros.js";
 
@@ -12,6 +13,7 @@ connectDatabse();
 app.use(express.json());
 
 app.use("/api/v1", productRoutes);
+app.use("/api/v1", authRoutes);
 
 app.use(errorMiddleware);
 
