@@ -1,56 +1,44 @@
 import React from "react";
-import MetaData from "./layout/MetaData.jsx";
+import { Link } from "react-router-dom";
+import styles from "./Home.module.css";
 
-const Home = () => {
+function Home() {
   return (
-    <>
-    <MetaData title={'Os melhores produtos'}/>
-      <div className="container">
-        <div className="row">
-          <div className="col-12 col-sm-6 col-md-12">
-            <h1 id="products_heading" className="text-secondary">
-              Últimos Produtos
-            </h1>
-            <section id="products" className="mt-5">
-              <div className="row">
-                <div className="col-sm-12 col-md-6 col-lg-3 my-3">
-                  <div className="card p-3 rounded">
-                    <img
-                      className="card-img-top mx-auto"
-                      src="./images/default_product.png"
-                      alt=""
-                    />
-                    <div className="card-body ps-3 d-flex justify-content-center flex-column">
-                      <h5 className="card-title">
-                        <a href="">Nome do Produto</a>
-                      </h5>
-                      <div className="ratings mt-auto d-flex">
-                        <div className="star-ratings">
-                          <i className="fa fa-star star-active"></i>
-                          <i className="fa fa-star star-active"></i>
-                          <i className="fa fa-star star-active"></i>
-                          <i className="fa fa-star star-active"></i>
-                          <i className="fa fa-star star-active"></i>
-                        </div>
-                        <span id="no_of_reviews" className="pt-2 ps-2">
-                          {" "}
-                          (0){" "}
-                        </span>
-                      </div>
-                      <p className="card-text mt-2">$100</p>
-                      <a href="" id="view_btn" className="btn btn-block">
-                        Veja Detalhes
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
+    <div className={styles.homeContainer}>
+      <h1 className={styles.homeTitle}>Bem-vindo ao VetHub</h1>
+      <div className={styles.dashboardGrid}>
+        <Link to="/tutores" className={styles.dashboardCard}>
+          <h2>Tutores</h2>
+          <p>Gerencie os tutores dos pacientes</p>
+        </Link>
+
+        <Link to="/consultas" className={styles.dashboardCard}>
+          <h2>Consultas</h2>
+          <p>Acompanhe e registre novas consultas</p>
+        </Link>
+
+        <Link to="/medicos" className={styles.dashboardCard}>
+          <h2>Médicos</h2>
+          <p>Controle os médicos ativos no sistema</p>
+        </Link>
+
+        <Link to="/agendamentos" className={styles.dashboardCard}>
+          <h2>Agendamentos</h2>
+          <p>Visualize e organize os horários</p>
+        </Link>
+
+        <Link to="/animais" className={styles.dashboardCard}>
+          <h2>Animais</h2>
+          <p>Gerencie e controle os animais</p>
+        </Link>
+
+        <Link to="/vethub-ia" className={`${styles.dashboardCard} ${styles.cardVetHub}`}>
+         <h2>VetHub + IA</h2>
+         <p>Ferramenta inteligente para suporte e análise</p>
+        </Link>
       </div>
-    </>
+    </div>
   );
-};
+}
 
 export default Home;

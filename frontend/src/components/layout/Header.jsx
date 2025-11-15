@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 
 const Header = () => {
   return (
@@ -92,3 +92,33 @@ const Header = () => {
 };
 
 export default Header;
+*/
+import React from "react"
+import { Link } from "react-router-dom"
+import "./Header.css"
+
+const Header = () => {
+  return (
+    <header className="header">
+      <div className="header-left">
+        <Link to="/" className="header-logo">
+          <img src="/images/LogoOfc.png" alt="Logo" />
+        </Link>
+      </div>
+
+      <nav className="header-nav">
+        <Link to="/tutores">Tutores</Link>
+        <Link to="/consultas">Consultas</Link>
+        <Link to="/medicos">Médicos</Link>
+        <Link to="/agendamentos">Agendamentos</Link>
+        <Link to="/animais">Animais</Link>
+      </nav>
+
+      <div className="header-right">
+        <Link to="/login" className="header-login">Login</Link>
+      </div>
+    </header>
+  )
+}
+
+export default Header

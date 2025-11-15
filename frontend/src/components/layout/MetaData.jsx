@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 
 const MetaData = ({ title }) => {
   return <Helmet>
-    <title>{`${title} - Loja Online`}</title>
+    <title>{`${title} - Veterinária Inteligente`}</title>
   </Helmet>;
 };
 
