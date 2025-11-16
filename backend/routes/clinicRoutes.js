@@ -1,51 +1,14 @@
 import express from "express";
-import { clinicService } from "../services/clinicService.js";
+import { clinicControllers } from "../controllers/clinicControllers.js";
+import { isAuthenticated } from "../middleware/auth.js";
+import { isAdmin } from "../middleware/isAdmin.js";
 
 const router = express.Router();
 
-router.post("/", async (req, res, next) => {
-  try {
-    const clinic = await clinicService.create(req.body);
-    res.status(201).json(clinic);
-  } catch (error) {
-    next(error);
-  }
-});
-
-router.get("/", async (req, res, next) => {
-  try {
-    const clinics = await clinicService.list();
-    res.status(200).json(clinics);
-  } catch (error) {
-    next(error);
-  }
-});
-
-router.get("/:id", async (req, res, next) => {
-  try {
-    const clinic = await clinicService.getById(req.params.id);
-    res.status(200).json(clinic);
-  } catch (error) {
-    next(error);
-  }
-});
-
-router.put("/:id", async (req, res, next) => {
-  try {
-    const clinic = await clinicService.update(req.params.id, req.body);
-    res.status(200).json(clinic);
-  } catch (error) {
-    next(error);
-  }
-});
-
-router.delete("/:id", async (req, res, next) => {
-  try {
-    await clinicService.delete(req.params.id);
-    res.status(200).json({ message: "Clínica deletada com sucesso" });
-  } catch (error) {
-    next(error);
-  }
-});
+router.post("/", isAuthenticated, isAdmin, clinicControllers.create);
+router.get("/", clinicControllers.list);
+router.get("/:id", clinicControllers.getById);
+router.put("/:id", isAuthenticated, isAdmin, clinicControllers.update);
+router.delete("/:id", isAuthenticated, isAdmin, clinicControllers.delete);
 
 export default router;
