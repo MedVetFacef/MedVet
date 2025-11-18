@@ -1,0 +1,45 @@
+# Dependências
+node_modules
+npm-debug.log
+package-lock.json
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# Git
+.git
+.gitignore
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Documentação
+README.md
+*.md
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# Logs
+logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Frontend (se não for usar no mesmo container)
+frontend/node_modules
+frontend/dist
+frontend/build
+
+# Prisma
+backend/prisma/migrations
+
