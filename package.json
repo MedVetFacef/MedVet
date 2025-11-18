@@ -6,8 +6,9 @@
   "scripts": {
     "start": "node backend/app.js",
     "dev": "nodemon backend/app.js",
-    "prisma:generate": "prisma generate",
-    "postinstall": "prisma generate"
+    "prisma:generate": "prisma generate --schema=./backend/prisma/schema.prisma",
+    "prisma:migrate": "prisma migrate deploy --schema=./backend/prisma/schema.prisma",
+    "postinstall": "prisma generate --schema=./backend/prisma/schema.prisma"
   },
   "author": "",
   "license": "ISC",
