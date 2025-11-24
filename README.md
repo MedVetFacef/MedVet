@@ -16,6 +16,8 @@ O sistema foi desenvolvido e testado com sucesso em ambiente local, funcionando 
 
 ---
 
+## Link BACK
+
 Link do Back: [https://deploy-projeto-webii-1.onrender.com](https://deploy-projeto-webii-1.onrender.com).
 
 ---
@@ -24,8 +26,8 @@ Link do Back: [https://deploy-projeto-webii-1.onrender.com](https://deploy-proje
 
 Este projeto foi desenvolvido por:
 
-- **Matheus de Castro Evangelista**
-- **Pedro Gomes de Almeida**
+- **Matheus de Castro Evangelista** Front-end
+- **Pedro Gomes de Almeida** Back-end
 
 ---
 
