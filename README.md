@@ -16,11 +16,11 @@ O sistema foi desenvolvido e testado com sucesso em ambiente local, funcionando 
 
 ---
 
-## LINK BACK E FRONT NÂO VERSIONADO
+## LINK BACK E FRONT NÃO VERSIONADO
 
 Link do Back: [https://deploy-projeto-webii-1.onrender.com](https://deploy-projeto-webii-1.onrender.com).
 
-Link do Front: [https://deploy-projeto-webii-1.onrender.com](https://deploy-projeto-webii-1.onrender.com).
+Link do Front: [https://med-vet-front.vercel.app/](https://med-vet-front.vercel.app/).
 
 ---
 
